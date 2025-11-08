@@ -1,0 +1,26 @@
+directories:
+  output: release
+  buildResources: build
+appId: com.contentplanner.app
+productName: Content Planner
+files:
+  - filter:
+      - dist/**/*
+      - electron/**/*
+      - package.json
+win:
+  target:
+    - nsis
+  icon: public/icon.png
+mac:
+  target:
+    - dmg
+  icon: public/icon.png
+  category: public.app-category.productivity
+linux:
+  target:
+    - AppImage
+    - deb
+  icon: public/icon.png
+  category: Office
+electronVersion: 39.1.1
